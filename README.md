@@ -3,24 +3,22 @@ D3 Assignment - Milinda 'ML' Liyanage
 
 ## Summary
 
-* This assignment is to use D3java script and plotly to read data and display interactive charts.
-* The application allows a user to select an ID which display the relevant master data and the corresponding top 10 values in a horizontal bar chart and the details in a bubble chart.
-* As an optional section, a gauge chart is displayed with a single attribute.
+* This assignment is to use D3 to create a chart.
 
-### The following tasks were done for the main requirement: 
+### The following tasks were done for the reqiored part: 
 
-* The data was in json format and it was read through d3.
-* A function was created to append the IDs to the dropdown list.
-* The HTML code was changed to run the main function (updatePlotly), when the list value is changed.
-* As the application starts, all the information in the page is prepopulated with the first ID’s data.  
-* The main function read the selected ID and runs the metadata pane and the three charts. The ID is passed when calling each of the functions.
-* The ID was converted to a an init before passing to two of the functions. 
-* The metadata function read the data then filter by the entered ID and then display.
-* The bar chart function read the data then filter by the entered ID and then slice to get the first 10 value set.
-* The bar chart is horizontal and have values displayed from large to small, i.e., reversed.
-* The bubble chart function read the data then filter by the entered ID and then display.
+* The data was in a scv file and was read through d3.
+* A chart group ws created with appropriate margins
+* Read the CSV data aand casted the values in to number
+* The number values were then used to create a lineaser scale for x & y axises
+* Appended the x axis to the bottom and y axis to the left
+* The axix labesl were appended to the chart group
+* A circle group was created for the bubble 
+* The circles were appned using the x and y linaer scales
+* Added the text to the cisrcle using the same linear scale
+* The text was the State's abbriviation read form the data
 
-### Optional requirement:
 
-* A gauge chart function was created to read the data filter by the entered ID.
-* The gauge display a single attribute.
+### Bonus part:
+
+* Not attempted.
