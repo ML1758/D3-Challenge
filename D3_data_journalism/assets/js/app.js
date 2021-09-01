@@ -90,6 +90,26 @@ d3.csv("assets/data/data.csv").then(function(healthData) {
       .attr('fill', 'white')
       .text(function(d){return d.abbr});
 
+    // setup the tooltip
+    var toolTip = d3.tip()
+      .attr("class", "d3-tip")
+      .offset([80, -60])
+      .html(function(d) {
+        return (`${d.state}<br>Poverty: ${d.poverty}%<br>Lacks Healthcare: ${d.healthcare}%`);
+      });
+
+    // create the tooltip in the chart
+    chartGroup.call(toolTip);
+
+    // add a event listeners to display and hide the tooltip
+    circlesGroup.on("mouseover", function(data) {
+      toolTip.show(data, this);
+    })
+      // onmouseout event
+      .on("mouseout", function(data, index) {
+        toolTip.hide(data);
+      });
+
   }).catch(function(error) {
     console.log(error);
 });

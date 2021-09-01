@@ -21,4 +21,5 @@ D3 Assignment - Milinda 'ML' Liyanage
 
 ### Bonus part:
 
-* Not attempted.
+* Dynamic data display - Not attempted.
+* D3-Tip - attemepted for the required part 
